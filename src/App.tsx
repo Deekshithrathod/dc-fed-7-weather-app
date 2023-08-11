@@ -10,28 +10,28 @@ import { getCompleteURL } from "./utils/urlMaker";
 import Search from "./pages/Search/Search";
 
 function App() {
-  // const { lat, lon } = useRecoilValue(coodsState);
+  const { lat, lon } = useRecoilValue(coodsState);
 
   const setWeather = useSetRecoilState(weatherState);
   const setFiveDayForecast = useSetRecoilState(fiveDayPredictionState);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const fiveDayData = await asyncFetchFiveDaysData(
-  //       getCompleteURL(lat, lon, "forecast")
-  //     );
-  //     const todayData = await asyncFetchTodayData(
-  //       getCompleteURL(lat, lon, "weather")
-  //     );
+  useEffect(() => {
+    (async () => {
+      const fiveDayData = await asyncFetchFiveDaysData(
+        getCompleteURL(lat, lon, "forecast")
+      );
+      const todayData = await asyncFetchTodayData(
+        getCompleteURL(lat, lon, "weather")
+      );
 
-  //     setWeather(todayData);
-  //     setFiveDayForecast(fiveDayData);
-  //   })();
-  // }, []);
+      setWeather(todayData);
+      setFiveDayForecast(fiveDayData);
+    })();
+  }, []);
 
   return (
     <div className="app-container">
-      {/* <Search /> */}
+      <Search />
       <Home />
     </div>
   );
