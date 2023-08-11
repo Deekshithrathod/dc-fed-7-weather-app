@@ -1,5 +1,12 @@
 import "./Day.css";
 
+interface IDay {
+  date: string;
+  icon: string;
+  tempHigh: number;
+  tempLow: number;
+}
+
 const Day = () => {
   return (
     <div className="day">

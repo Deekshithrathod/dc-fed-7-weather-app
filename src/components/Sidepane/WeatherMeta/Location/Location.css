@@ -1,0 +1,16 @@
+.weather-location {
+  color: #88869d;
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2rem;
+}
+
+.weather-location > svg {
+  color: #88869d;
+  color: inherit;
+}

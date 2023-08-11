@@ -1,0 +1,20 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+nav > button {
+  border: none;
+  color: #e7e7eb;
+  background-color: #6e707a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 0.625rem 1.125rem;
+
+  font-size: 1rem;
+}
+nav > button:last-child {
+  padding: 0.5rem;
+  border-radius: 2rem;
+}

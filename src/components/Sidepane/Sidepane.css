@@ -5,49 +5,8 @@
   padding: 1.125rem 0.75rem;
 }
 
-.sidepane > nav {
-  display: flex;
-  justify-content: space-between;
-
-  width: 100%;
-}
-
-.sidepane > nav > button {
-  border: none;
-  color: #e7e7eb;
-  background: #6e707a;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 0.625rem 1.125rem;
-
-  font-size: 1rem;
-}
-.sidepane > nav > button:last-child {
-  padding: 0.5rem;
-  border-radius: 2rem;
-}
-
 .container {
   margin-top: 1rem;
-}
-
-.weather-img-container {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 23rem;
-}
-
-.bg-weather-img {
-  position: absolute;
-  top: 0rem;
-  left: -6rem;
-  width: 150%;
-  height: auto;
-
-  opacity: 0.1;
 }
 
 .weather-meta {

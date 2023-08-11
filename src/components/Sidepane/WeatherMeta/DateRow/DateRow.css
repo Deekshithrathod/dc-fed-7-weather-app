@@ -1,0 +1,15 @@
+.weather-day {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 3rem;
+}
+
+.relative,
+.date,
+.weather-day > span {
+  color: #88869d;
+  font-size: 1.125rem;
+  font-weight: 500;
+}

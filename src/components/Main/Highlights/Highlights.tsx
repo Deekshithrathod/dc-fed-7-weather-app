@@ -1,7 +1,27 @@
+import { useRecoilValue } from "recoil";
 import "./Highlights.css";
 import NavigationIcon from "@mui/icons-material/Navigation";
+import { todayHighlightsState } from "../../../atoms/weather";
+
+export interface ITodayHighligths {
+  windSpeed: number;
+  windDirection: number;
+
+  humidity: number;
+
+  visibility: number;
+
+  pressure: number;
+}
 
 const Highlights = () => {
+  const {
+    windSpeed,
+    windDirection,
+    humidity,
+    visibility,
+    pressure,
+  }: ITodayHighligths = useRecoilValue(todayHighlightsState);
   return (
     <div className="highlights">
       <h2>Today's highlights</h2>
@@ -9,7 +29,8 @@ const Highlights = () => {
         <div className="card ">
           <h3>Wind Status</h3>
           <div className="value">
-            7<span>mph</span>
+            {windSpeed}
+            <span>mph</span>
           </div>
           <div className="wind">
             <NavigationIcon
@@ -26,7 +47,8 @@ const Highlights = () => {
         <div className="card ">
           <h3>Humidity</h3>
           <div className="value">
-            84<span>%</span>
+            {humidity}
+            <span>%</span>
           </div>
           <div className="humidity">
             <div className="milestones">
@@ -34,8 +56,8 @@ const Highlights = () => {
               <div>50</div>
               <div>100</div>
             </div>
-            <progress id="humidity" value="82" max="100">
-              82%
+            <progress id="humidity" value={humidity} max="100">
+              {humidity}%
             </progress>
             <div className="progress-unit">%</div>
           </div>
@@ -43,13 +65,15 @@ const Highlights = () => {
         <div className="card">
           <h3>Visibility</h3>
           <div className="value">
-            6,4<span> miles</span>
+            {visibility}
+            <span> miles</span>
           </div>
         </div>
         <div className="card">
           <h3>Air Pressure</h3>
           <div className="value">
-            998<span> mb</span>
+            {pressure}
+            <span> mb</span>
           </div>
         </div>
       </div>

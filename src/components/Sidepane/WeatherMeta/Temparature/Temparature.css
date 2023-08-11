@@ -1,0 +1,11 @@
+.weather-temp {
+  color: #e7e7eb;
+  font-size: 9rem;
+  font-weight: 500;
+}
+
+.weather-temp > span {
+  color: #a09fb1;
+  font-size: 3rem;
+  font-weight: 500;
+}
