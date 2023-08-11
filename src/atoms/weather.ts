@@ -5,23 +5,18 @@ import { IWeatherDesc } from "../components/Sidepane/WeatherMeta/WeatherDesc/Wea
 import { ITodayHighligths } from "../components/Main/Highlights/Highlights";
 
 // const weatherData
-interface IWeather
+export interface IWeather
   extends ILocation,
     ITemparature,
     IWeatherDesc,
-    ITodayHighligths {
-  temperatureMin: number;
-  temperatureMax: number;
-}
+    ITodayHighligths {}
 
-const defaultWeatherData: IWeather = {
+export const defaultWeatherData: IWeather = {
   desc: "Shower",
   country: "IN",
   place: "Delhi",
 
   temperature: 15,
-  temperatureMin: 11,
-  temperatureMax: 19,
 
   windSpeed: 12,
   windDirection: 249,

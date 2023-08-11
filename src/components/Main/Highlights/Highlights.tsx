@@ -30,7 +30,7 @@ const Highlights = () => {
           <h3>Wind Status</h3>
           <div className="value">
             {windSpeed}
-            <span>mph</span>
+            <span>kmph</span>
           </div>
           <div className="wind">
             <NavigationIcon
@@ -66,7 +66,7 @@ const Highlights = () => {
           <h3>Visibility</h3>
           <div className="value">
             {visibility}
-            <span> miles</span>
+            <span> m</span>
           </div>
         </div>
         <div className="card">

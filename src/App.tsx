@@ -4,20 +4,28 @@ import Home from "./pages/Home/Home";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { coodsState } from "./atoms/coordinates";
 import { weatherState } from "./atoms/weather";
+import asyncFetchTodayData, { asyncFetchFiveDaysData } from "./utils/fetchData";
+import { fiveDayPredictionState } from "./atoms/fiveDayWeather";
+import { getCompleteURL } from "./utils/urlMaker";
 
 function App() {
-  const coods = useRecoilValue(coodsState);
+  const { lat, lon } = useRecoilValue(coodsState);
+
   const setWeather = useSetRecoilState(weatherState);
+  const setFiveDayForecast = useSetRecoilState(fiveDayPredictionState);
 
   useEffect(() => {
-    // const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${coods.lat}&lon=${coods.lon}&appid=b52fd4b268ccf78fb1a2d9dec99a5ddf`;
-    // fetch(URL)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     console.log(`sflkajsf;lakjsfl;kajs;l`);
-    //     setWeather(data);
-    //   });
+    (async () => {
+      const fiveDayData = await asyncFetchFiveDaysData(
+        getCompleteURL(lat, lon, "forecast")
+      );
+      const todayData = await asyncFetchTodayData(
+        getCompleteURL(lat, lon, "weather")
+      );
+
+      setWeather(todayData);
+      setFiveDayForecast(fiveDayData);
+    })();
   }, []);
 
   return (

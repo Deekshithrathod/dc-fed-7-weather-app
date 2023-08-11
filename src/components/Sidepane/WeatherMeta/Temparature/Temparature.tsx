@@ -10,7 +10,7 @@ const Temparature = () => {
   const temp = useRecoilValue(temperatureState);
   return (
     <div className="weather-temp">
-      {temp}
+      {temp.toFixed(1)}
       <span>°C</span>
     </div>
   );

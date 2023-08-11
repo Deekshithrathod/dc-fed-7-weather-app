@@ -1,22 +1,22 @@
 import "./Day.css";
 
-interface IDay {
+export interface IDay {
   date: string;
   icon: string;
   tempHigh: number;
   tempLow: number;
 }
 
-const Day = () => {
+const Day = ({ date, icon, tempHigh, tempLow }: IDay) => {
   return (
     <div className="day">
-      <div className="date">Tomorrow</div>
+      <div className="date">{date}</div>
       <div className="weather-predicted-image">
-        <img src="Thunderstorm.png" alt="Thunderstorm" />
+        <img src={`${icon}.png`} alt={icon} />
       </div>
       <div className="temp-range">
-        <div className="temp-high">16°C</div>
-        <div className="temp-low">11°C</div>
+        <div className="temp-high">{tempHigh.toFixed(2)}°C</div>
+        <div className="temp-low">{tempLow.toFixed(2)}°C</div>
       </div>
     </div>
   );
