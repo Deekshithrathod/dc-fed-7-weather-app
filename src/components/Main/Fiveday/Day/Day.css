@@ -1,0 +1,42 @@
+.day {
+  background-color: #1e213a;
+  padding: 1.375rem 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date {
+  color: #e7e7eb;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.weather-predicted-image {
+  height: 4rem;
+
+  margin-top: 0.675rem;
+}
+
+.weather-predicted-image > img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.temp-range {
+  display: flex;
+  gap: 1rem;
+
+  color: #e7e7eb;
+  font-size: 1rem;
+  font-weight: 500;
+
+  margin-top: 2rem;
+}
+
+.temp-low {
+  color: #a09fb1;
+}

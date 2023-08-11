@@ -1,0 +1,94 @@
+.highlights {
+  padding: 0 3rem 3rem;
+}
+
+h2 {
+  color: #e7e7eb;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.card {
+  background: #1e213a;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1.5rem 2.5rem;
+}
+
+.card > h3 {
+  color: #e7e7eb;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.value {
+  color: #e7e7eb;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.value > span {
+  color: #e7e7eb;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.wind {
+  color: #e7e7eb;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  gap: 0 0.75rem;
+
+  margin-top: 2rem;
+}
+
+.humidity {
+  width: 15rem;
+  margin-top: 0.75rem;
+}
+
+.milestones {
+  color: #a09fb1;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+progress {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 5rem;
+  background-color: white;
+}
+progress::-webkit-progress-value {
+  border-radius: 5rem;
+  background-color: #ffec65;
+}
+
+.progress-unit {
+  color: #a09fb1;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: right;
+  margin-top: 0.25rem;
+}
