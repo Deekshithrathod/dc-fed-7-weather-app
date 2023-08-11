@@ -2,9 +2,11 @@ import { useSetRecoilState } from "recoil";
 import "./Navbar.css";
 import GpsFixedSharpIcon from "@mui/icons-material/GpsFixedSharp";
 import { coodsState } from "../../../atoms/coordinates";
+import { showSearchState } from "../../../atoms/search";
 
 const Navbar = () => {
   const setCoods = useSetRecoilState(coodsState);
+  const setIsShowSearchPage = useSetRecoilState(showSearchState);
 
   const options = {
     enableHighAccuracy: true,
@@ -35,7 +37,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      <button>Search for places</button>
+      <button
+        onClick={() => {
+          setIsShowSearchPage((prev) => !prev);
+        }}>
+        Search for places
+      </button>
       <button onClick={handleClick}>
         <GpsFixedSharpIcon sx={{ fontSize: "1.25rem" }} />
       </button>

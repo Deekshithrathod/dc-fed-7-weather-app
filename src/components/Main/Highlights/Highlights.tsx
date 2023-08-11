@@ -15,13 +15,8 @@ export interface ITodayHighligths {
 }
 
 const Highlights = () => {
-  const {
-    windSpeed,
-    windDirection,
-    humidity,
-    visibility,
-    pressure,
-  }: ITodayHighligths = useRecoilValue(todayHighlightsState);
+  const { windSpeed, humidity, visibility, pressure }: ITodayHighligths =
+    useRecoilValue(todayHighlightsState);
   return (
     <div className="highlights">
       <h2>Today's highlights</h2>

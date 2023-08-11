@@ -1,6 +1,11 @@
 import { atom } from "recoil";
 
-export const coodsState = atom({
+export interface ICoords {
+  lat: number;
+  lon: number;
+}
+
+export const coodsState = atom<ICoords>({
   key: "coodsState",
   default: {
     lat: 28.65195,

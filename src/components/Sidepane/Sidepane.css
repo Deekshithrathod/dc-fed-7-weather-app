@@ -9,62 +9,8 @@
   margin-top: 1rem;
 }
 
-.weather-meta {
-  width: 80%;
-  /* background-color: grey; */
-  margin: 0rem auto 0;
-  text-align: center;
-}
-
-.weather-temp {
-  /* margin-top: ; */
-  color: #e7e7eb;
-  font-size: 9rem;
-  font-weight: 500;
-}
-
-.weather-temp > span {
-  color: #a09fb1;
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-.weather-type {
-  color: #a09fb1;
-  font-size: 2.25rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-}
-
-.weather-day {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-
-  margin-top: 3rem;
-}
-
-.relative,
-.date,
-.weather-day > span {
-  color: #88869d;
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-
-.weather-location {
-  color: #88869d;
-  font-size: 1.125rem;
-  font-weight: 500;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 2rem;
-}
-
-.weather-location > svg {
-  color: #88869d;
-  color: inherit;
+@media (min-width: 700px) {
+  .sidepane {
+    width: 25%;
+  }
 }

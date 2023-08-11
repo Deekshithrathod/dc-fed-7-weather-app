@@ -29,7 +29,7 @@ export const defaultWeatherData: IWeather = {
 };
 
 export const weatherState = atom<IWeather>({
-  key: "weatheState",
+  key: "weatherState",
   default: defaultWeatherData,
 });
 

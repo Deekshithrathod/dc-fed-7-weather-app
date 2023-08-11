@@ -1,5 +1,6 @@
 import { IWeather, defaultWeatherData } from "../atoms/weather";
 import { IDay } from "../components/Main/Fiveday/Day/Day";
+import { ISearchResult } from "../pages/Search/SearchResult/SearchResult";
 import getFileNameFromDesc from "./imageFinder";
 
 const asyncFetchTodayData = async (URL: string): Promise<IWeather> => {
@@ -27,8 +28,8 @@ const asyncFetchTodayData = async (URL: string): Promise<IWeather> => {
   return ret;
 };
 
-export const getDateFromEpoc = (epoch: number) => {
-  return new Date(epoch).toLocaleDateString("en-gb", {
+export const getDateFromSeconds = (seconds: number) => {
+  return new Date(seconds).toLocaleDateString("en-gb", {
     month: "short",
     day: "numeric",
     weekday: `short`,
@@ -41,26 +42,55 @@ export const asyncFetchFiveDaysData = async (URL: string): Promise<IDay[]> => {
   const res = await fetch(URL);
   const data = await res.json();
   const fivDays = data.list.slice(0, 5);
-
+  let i = 0;
   fivDays.forEach(
     (day: {
       dt: number;
       weather: { main: string };
       main: { temp_max: number; temp_min: number };
     }) => {
+      ++i;
       const newDayData: IDay = {
-        date: getDateFromEpoc(day.dt),
+        date: getDateFromSeconds(Date.now() + 60 * 60 * 24 * 1000 * i),
         icon: getFileNameFromDesc(day.weather.main),
         tempHigh: day.main.temp_max - 273,
         tempLow: day.main.temp_min - 273,
       };
-      console.log(newDayData);
       ret.push(newDayData);
     }
   );
-  console.log(ret);
 
   return ret;
+};
+
+export const asyncGetSearchResults = async (
+  URL: string
+): Promise<ISearchResult[]> => {
+  const res = await fetch(URL);
+  const data = await res.json();
+
+  let retVal: ISearchResult[] = [];
+
+  data.forEach(
+    (searchResult: {
+      lat: any;
+      lon: any;
+      name: any;
+      country: any;
+      state: any;
+    }) => {
+      const res: ISearchResult = {
+        lat: searchResult.lat,
+        lon: searchResult.lon,
+        name: searchResult.name,
+        country: searchResult.country,
+        state: searchResult.state,
+      };
+      retVal.push(res);
+    }
+  );
+
+  return retVal;
 };
 
 export default asyncFetchTodayData;
