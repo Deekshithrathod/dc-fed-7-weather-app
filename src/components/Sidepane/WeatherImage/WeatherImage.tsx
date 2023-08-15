@@ -8,8 +8,13 @@ const WeatherDisplay = () => {
 
   return (
     <div className="weather-img-container">
-      <img src="Cloud-background.png" className="bg-weather-img" />
-      <img src={`${getFileNameFromDesc(desc)}.png`} />
+      <div className="bg-container">
+        <img src="Cloud-background.png" className="bg-weather-img" />
+      </div>
+      <img
+        src={`${getFileNameFromDesc(desc)}.png`}
+        className="main-weather-img"
+      />
     </div>
   );
 };

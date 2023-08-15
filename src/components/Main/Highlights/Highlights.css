@@ -1,5 +1,7 @@
 .highlights {
   padding: 0 3rem 3rem;
+
+  max-width: 50rem;
 }
 
 h2 {
@@ -91,4 +93,15 @@ progress::-webkit-progress-value {
   font-weight: 700;
   text-align: right;
   margin-top: 0.25rem;
+}
+
+@media (min-width: 700px) {
+  .highlights {
+    margin-top: 3rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

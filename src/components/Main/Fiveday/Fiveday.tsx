@@ -1,7 +1,7 @@
-import { useRecoilValue } from "recoil";
-import Day from "./Day/Day";
 import "./Fiveday.css";
+import { useRecoilValue } from "recoil";
 import { fiveDayPredictionState } from "../../../atoms/fiveDayWeather";
+import Day from "./Day/Day";
 
 const Fiveday = () => {
   const fiveDayPrediction = useRecoilValue(fiveDayPredictionState);

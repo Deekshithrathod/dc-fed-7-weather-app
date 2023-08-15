@@ -1,4 +1,6 @@
-.home {
-  display: flex;
-  background-color: rebeccapurple;
+@media (min-width: 700px) {
+  .home {
+    display: flex;
+    justify-content: flex-start;
+  }
 }

@@ -7,7 +7,6 @@ import { weatherState } from "./atoms/weather";
 import asyncFetchTodayData, { asyncFetchFiveDaysData } from "./utils/fetchData";
 import { fiveDayPredictionState } from "./atoms/fiveDayWeather";
 import { getCompleteURL } from "./utils/urlMaker";
-import Search from "./pages/Search/Search";
 
 function App() {
   const { lat, lon } = useRecoilValue(coodsState);
@@ -31,7 +30,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <Search />
+      {/* <Search /> */}
       <Home />
     </div>
   );

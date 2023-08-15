@@ -40,3 +40,8 @@
 .temp-low {
   color: #a09fb1;
 }
+@media (min-width: 700px) {
+  .day {
+    min-width: 9rem;
+  }
+}

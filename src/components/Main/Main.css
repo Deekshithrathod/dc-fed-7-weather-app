@@ -1,12 +1,10 @@
 main {
   background: #100e1d;
 }
+
 @media (min-width: 700px) {
   main {
-    /* background-color: red; */
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 25rem;
+    padding-left: 7rem;
   }
 }

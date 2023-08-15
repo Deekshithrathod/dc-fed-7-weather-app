@@ -7,3 +7,16 @@
 
   gap: 2rem 1.5rem;
 }
+
+@media (min-width: 700px) {
+  .fiveday-container {
+    max-width: 80rem;
+    padding: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 2rem 1.5rem;
+  }
+}
