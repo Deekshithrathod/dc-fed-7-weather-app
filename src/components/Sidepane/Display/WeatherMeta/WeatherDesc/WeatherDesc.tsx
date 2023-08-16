@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil";
 import "./WeatherDesc.css";
-import { weatherDescState } from "../../../../atoms/weather";
+import { weatherDescState } from "../../../../../atoms/weather";
 
 export interface IWeatherDesc {
   desc: string;

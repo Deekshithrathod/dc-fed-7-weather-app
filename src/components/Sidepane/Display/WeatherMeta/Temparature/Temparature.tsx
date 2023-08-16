@@ -1,7 +1,7 @@
+import { tempUnit, tempUnitState } from "../../../../../atoms/temperatureUnits";
+import { temperatureState } from "../../../../../atoms/weather";
 import "./Temparature.css";
 import { useRecoilValue } from "recoil";
-import { temperatureState } from "../../../../atoms/weather";
-import { tempUnit, tempUnitState } from "../../../../atoms/temperatureUnits";
 
 export interface ITemparature {
   temperature: number;

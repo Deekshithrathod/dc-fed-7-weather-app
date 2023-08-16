@@ -1,6 +1,6 @@
 import { IWeather, defaultWeatherData } from "../atoms/weather";
 import { IDay } from "../components/Main/Fiveday/Day/Day";
-import { ISearchResult } from "../pages/Search/SearchResult/SearchResult";
+import { ISearchResult } from "../components/Sidepane/SearchConsole/SearchResult/SearchResult";
 import getFileNameFromDesc from "./imageFinder";
 
 const asyncFetchTodayData = async (URL: string): Promise<IWeather> => {

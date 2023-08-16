@@ -1,7 +1,7 @@
+import { weatherDescState } from "../../../../atoms/weather";
+import getFileNameFromDesc from "../../../../utils/imageFinder";
 import "./WeatherImage.css";
 import { useRecoilValue } from "recoil";
-import { weatherDescState } from "../../../atoms/weather";
-import getFileNameFromDesc from "../../../utils/imageFinder";
 
 const WeatherDisplay = () => {
   const desc = useRecoilValue(weatherDescState);

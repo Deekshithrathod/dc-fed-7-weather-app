@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import "./Location.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { locationState } from "../../../../atoms/weather";
+import { locationState } from "../../../../../atoms/weather";
 
 export interface ILocation {
   place: string;

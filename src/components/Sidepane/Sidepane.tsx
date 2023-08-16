@@ -1,16 +1,18 @@
 import "./Sidepane.css";
-import Navbar from "./Navbar/Navbar";
-import WeatherDisplay from "./WeatherImage/WeatherImage";
-import WeatherMeta from "./WeatherMeta/WeatherMeta";
+
+import Display from "./Display/Display";
+import SearchConsole from "./SearchConsole/SearchConsole";
+import { useState } from "react";
 
 const Sidepane = () => {
+  const [showSearch, setShowSearch] = useState(false);
   return (
     <div className="sidepane">
-      <Navbar />
-      <div className="container">
-        <WeatherDisplay />
-        <WeatherMeta />
-      </div>
+      {showSearch ? (
+        <SearchConsole setShowSearch={setShowSearch} />
+      ) : (
+        <Display setShowSearch={setShowSearch} />
+      )}
     </div>
   );
 };
