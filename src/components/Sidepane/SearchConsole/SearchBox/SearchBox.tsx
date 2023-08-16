@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./SearchBox.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { asyncGetSearchResults } from "../../../../utils/fetchData";
-import { getCompleteURL } from "../../../../utils/urlMaker";
 
 const SearchBox = () => {
   const [loc, setLoc] = useState("");
@@ -12,10 +10,11 @@ const SearchBox = () => {
 
     // search using the OpenWeather API & update the searchResultsState
     (async () => {
-      const data = await asyncGetSearchResults(
-        getCompleteURL(0, 0, "search", loc)
-      );
-      console.log(data);
+      // const data = await asyncGetSearchResults(
+      //   getCompleteURL(0, 0, "search", loc)
+      // );
+      // console.log(data);
+      // update state here here
     })();
   };
 
