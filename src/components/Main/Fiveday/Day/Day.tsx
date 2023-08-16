@@ -15,8 +15,8 @@ const Day = ({ date, icon, tempHigh, tempLow }: IDay) => {
         <img src={`${icon}.png`} alt={icon} />
       </div>
       <div className="temp-range">
-        <div className="temp-high">{tempHigh.toFixed(2)}°C</div>
-        <div className="temp-low">{tempLow.toFixed(2)}°C</div>
+        <div className="temp-high">{Math.round(tempHigh)}°C</div>
+        <div className="temp-low">{Math.round(tempLow)}°C</div>
       </div>
     </div>
   );

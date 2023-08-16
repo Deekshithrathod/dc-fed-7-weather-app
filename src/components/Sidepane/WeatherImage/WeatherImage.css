@@ -1,23 +1,32 @@
 .weather-img-container {
   position: relative;
 
-  margin-left: -0.75rem;
-  width: 100vw;
-  height: 23rem;
+  height: 25rem;
+
+  margin: 0 -0.75rem;
 }
 
 .bg-container {
+  position: absolute;
+
+  width: 100%;
   height: 100%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .bg-weather-img {
-  opacity: 0.1;
+  opacity: 0.2;
 
-  width: 140%;
+  width: 100%;
   height: 100%;
 
   object-fit: cover;
-  object-position: -7rem 110%;
 }
 
 .main-weather-img {
@@ -30,15 +39,6 @@
 
 @media (min-width: 700px) {
   .weather-img-container {
-    margin-left: -3rem;
-    width: 100%;
-  }
-
-  .bg-weather-img {
-    width: 150%;
-  }
-
-  .main-weather-img {
-    left: 55%;
+    margin: 0 -2rem;
   }
 }

@@ -98,6 +98,7 @@ progress::-webkit-progress-value {
 @media (min-width: 700px) {
   .highlights {
     margin-top: 3rem;
+    max-width: 70rem;
   }
 
   .cards-container {

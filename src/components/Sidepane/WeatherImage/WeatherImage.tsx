@@ -1,5 +1,5 @@
-import { useRecoilValue } from "recoil";
 import "./WeatherImage.css";
+import { useRecoilValue } from "recoil";
 import { weatherDescState } from "../../../atoms/weather";
 import getFileNameFromDesc from "../../../utils/imageFinder";
 

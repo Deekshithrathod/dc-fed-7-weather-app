@@ -14,6 +14,7 @@ nav > button {
 
   font-size: 1rem;
 }
+
 nav > button:last-child {
   padding: 0.5rem;
   border-radius: 2rem;

@@ -1,5 +1,5 @@
-import { useRecoilValue } from "recoil";
 import "./Highlights.css";
+import { useRecoilValue } from "recoil";
 import NavigationIcon from "@mui/icons-material/Navigation";
 import { todayHighlightsState } from "../../../atoms/weather";
 
