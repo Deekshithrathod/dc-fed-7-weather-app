@@ -1,10 +1,9 @@
 import { atom, selector } from "recoil";
-import { ILocation } from "../components/Sidepane/WeatherMeta/Location/Location";
-import { ITemparature } from "../components/Sidepane/WeatherMeta/Temparature/Temparature";
-import { IWeatherDesc } from "../components/Sidepane/WeatherMeta/WeatherDesc/WeatherDesc";
 import { ITodayHighligths } from "../components/Main/Highlights/Highlights";
+import { ILocation } from "../components/Sidepane/Display/WeatherMeta/Location/Location";
+import { ITemparature } from "../components/Sidepane/Display/WeatherMeta/Temparature/Temparature";
+import { IWeatherDesc } from "../components/Sidepane/Display/WeatherMeta/WeatherDesc/WeatherDesc";
 
-// const weatherData
 export interface IWeather
   extends ILocation,
     ITemparature,
