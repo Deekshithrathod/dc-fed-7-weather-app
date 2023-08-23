@@ -1,3 +1,4 @@
+import axios from "axios";
 import { IWeather, defaultWeatherData } from "../atoms/weather";
 import { IDay } from "../components/Main/Fiveday/Day/Day";
 import { ISearchResult } from "../components/Sidepane/SearchConsole/SearchResults/SearchResult/SearchResult";
@@ -39,8 +40,10 @@ export const getDateFromSeconds = (seconds: number) => {
 export const asyncFetchFiveDaysData = async (URL: string): Promise<IDay[]> => {
   let ret: IDay[] = [];
 
-  const res = await fetch(URL);
-  const data = await res.json();
+  const res = await axios.get(URL);
+  const data = await res.data;
+  console.log(data);
+
   const fivDays = data.list.slice(0, 5);
   let i = 0;
   fivDays.forEach(
@@ -53,8 +56,8 @@ export const asyncFetchFiveDaysData = async (URL: string): Promise<IDay[]> => {
       const newDayData: IDay = {
         date: getDateFromSeconds(Date.now() + 60 * 60 * 24 * 1000 * i),
         icon: getFileNameFromDesc(day.weather.main),
-        tempHigh: day.main.temp_max - 273,
-        tempLow: day.main.temp_min - 273,
+        tempHigh: day.main.temp_max,
+        tempLow: day.main.temp_min,
       };
       ret.push(newDayData);
     }

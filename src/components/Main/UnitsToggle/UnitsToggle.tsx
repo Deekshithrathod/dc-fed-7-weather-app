@@ -7,7 +7,6 @@ const UnitsToggle = () => {
   const unitsList: tempUnit[] = ["°C", "°F"];
   const setTemperatureUnit = useSetRecoilState(tempUnitState);
 
-  // local state for setting bg color
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <div

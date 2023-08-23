@@ -1,5 +1,6 @@
 import { tempUnit, tempUnitState } from "../../../../../atoms/temperatureUnits";
 import { temperatureState } from "../../../../../atoms/weather";
+import { getTempFromKelvin } from "../../../../../utils/tempCalculator";
 import "./Temparature.css";
 import { useRecoilValue } from "recoil";
 
@@ -13,7 +14,7 @@ const Temparature = () => {
 
   return (
     <div className="weather-temp">
-      {temp}
+      {getTempFromKelvin(temp, tempUnit).toFixed(1)}
       <span>{tempUnit}</span>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { tempUnit, tempUnitState } from "../../../../atoms/temperatureUnits";
 import "./Day.css";
+import { getTempFromKelvin } from "../../../../utils/tempCalculator";
 
 export interface IDay {
   date: string;
@@ -20,11 +21,11 @@ const Day = ({ date, icon, tempHigh, tempLow }: IDay) => {
       </div>
       <div className="temp-range">
         <div className="temp-high">
-          {Math.round(tempHigh)}
+          {getTempFromKelvin(tempHigh, tempUnit).toFixed(1)}
           {tempUnit}
         </div>
         <div className="temp-low">
-          {Math.round(tempLow)}
+          {getTempFromKelvin(tempLow, tempUnit).toFixed(1)}
           {tempUnit}
         </div>
       </div>
