@@ -1,6 +1,6 @@
 @media (min-width: 700px) {
   .home {
     display: flex;
-    justify-content: flex-start;
+    background: #100e1d;
   }
 }

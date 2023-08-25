@@ -1,11 +1,6 @@
 .sidepane {
   background: #1e213a;
-  height: 100vh;
-  padding: 1.125rem 0.75rem;
-}
-
-.container {
-  margin-top: 1rem;
+  padding: 1.125rem 0.75rem 4rem;
 }
 
 @media (min-width: 700px) {
@@ -13,8 +8,5 @@
     width: 30%;
     min-width: 23rem;
     max-width: 27rem;
-    height: auto;
-
-    padding: 1.5rem 2rem;
   }
 }

@@ -7,6 +7,7 @@ footer {
   line-height: normal;
   text-align: center;
 
+  margin: 0 auto;
   margin-top: 10rem;
   padding-bottom: 3rem;
 }
@@ -20,7 +21,7 @@ footer > b > a {
 
 @media (min-width: 700px) {
   footer {
-    margin-top: 0.5rem;
+    margin-top: 4rem;
     padding-bottom: 2rem;
   }
 }

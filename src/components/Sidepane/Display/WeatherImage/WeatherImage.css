@@ -36,9 +36,3 @@
 
   transform: translate(-50%, -50%);
 }
-
-@media (min-width: 700px) {
-  .weather-img-container {
-    margin: 0 -2rem;
-  }
-}

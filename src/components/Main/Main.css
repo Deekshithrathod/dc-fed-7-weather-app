@@ -1,11 +1,9 @@
 main {
   background: #100e1d;
-  height: 100vh;
 }
 
 @media (min-width: 700px) {
   main {
     width: 100%;
-    padding-left: 7rem;
   }
 }
