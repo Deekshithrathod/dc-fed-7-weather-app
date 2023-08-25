@@ -12,12 +12,17 @@ const SearchBox = () => {
 
   const handleClick = () => {
     // search using the OpenWeather API & update the searchResultsState
-    (async () => {
-      const data = await asyncGetSearchResults(
-        getCompleteURL(0, 0, "search", loc)
-      );
-      setLocSearchResults(data);
-    })();
+    const updateSearchResults = async () => {
+      try {
+        const data = await asyncGetSearchResults(
+          getCompleteURL(0, 0, "search", loc)
+        );
+        setLocSearchResults(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    updateSearchResults();
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
