@@ -8,7 +8,7 @@ const SearchConsole = ({ setShowSearch }: { setShowSearch: Function }) => {
     <>
       <CloseBtn setShowSearch={setShowSearch} />
       <SearchBox />
-      <SearchResults />
+      <SearchResults setShowSearch={setShowSearch} />
     </>
   );
 };

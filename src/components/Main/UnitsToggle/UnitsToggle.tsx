@@ -12,8 +12,6 @@ const UnitsToggle = () => {
     <div
       className="units-toggle"
       onClick={(e) => {
-        console.log(`buttonClicked`);
-
         if ((e.target as HTMLInputElement).textContent === `°C`) {
           setSelectedIndex(0);
           setTemperatureUnit(`°C`);

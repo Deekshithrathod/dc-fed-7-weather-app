@@ -6,14 +6,14 @@ export interface ISearchResult {
   lat: number;
   lon: number;
   country: string;
-  state: string;
+  state?: string;
 }
 
 const SearchResult = ({ lat, lon, country, state, name }: ISearchResult) => {
   return (
     <div className="search-result" data-lat={lat} data-lon={lon}>
       <span>
-        {name}, {state} ({country})
+        {name} {state ? `, ${state}` : ``} | {country}
       </span>
       <ChevronRightIcon />
     </div>

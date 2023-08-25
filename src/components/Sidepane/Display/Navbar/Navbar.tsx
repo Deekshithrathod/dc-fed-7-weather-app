@@ -26,8 +26,6 @@ const Navbar = ({ setShowSearch }: { setShowSearch: Function }) => {
   }
 
   const handleClick = () => {
-    console.log(`getLocation is clicked`);
-
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, handleError, options);
     }

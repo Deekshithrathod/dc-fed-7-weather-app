@@ -42,7 +42,6 @@ export const asyncFetchFiveDaysData = async (URL: string): Promise<IDay[]> => {
 
   const res = await axios.get(URL);
   const data = await res.data;
-  console.log(data);
 
   const fivDays = data.list.slice(0, 5);
   let i = 0;
@@ -70,9 +69,9 @@ export const asyncGetSearchResults = async (
   URL: string
 ): Promise<ISearchResult[]> => {
   const res = await fetch(URL, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+    // headers: {
+    //   "Access-Control-Allow-Origin": "*",
+    // },
   });
 
   const data = await res.json();

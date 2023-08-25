@@ -15,7 +15,7 @@ export const defaultWeatherData: IWeather = {
   country: "IN",
   place: "Delhi",
 
-  temperature: 15,
+  temperature: 273 + 15,
 
   windSpeed: 12,
   windDirection: 249,

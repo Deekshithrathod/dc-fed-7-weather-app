@@ -3,20 +3,20 @@ import "./SearchBox.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { asyncGetSearchResults } from "../../../../utils/fetchData";
 import { getCompleteURL } from "../../../../utils/urlMaker";
+import { useSetRecoilState } from "recoil";
+import { searchResults } from "../../../../atoms/search";
 
 const SearchBox = () => {
   const [loc, setLoc] = useState("");
+  const setLocSearchResults = useSetRecoilState(searchResults);
 
   const handleClick = () => {
-    console.log(loc);
-
     // search using the OpenWeather API & update the searchResultsState
     (async () => {
       const data = await asyncGetSearchResults(
         getCompleteURL(0, 0, "search", loc)
       );
-      console.log(data);
-      // update state here here
+      setLocSearchResults(data);
     })();
   };
 
@@ -40,6 +40,7 @@ const SearchBox = () => {
           id="location"
           placeholder="search location"
           onKeyDown={handleKeyDown}
+          autoComplete="off"
         />
       </div>
       <button onClick={handleClick}>Search</button>
